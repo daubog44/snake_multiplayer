@@ -7,7 +7,7 @@ const clientRooms = {};
 
 const io = require("socket.io")("", {
   cors: {
-    origin: "http://127.0.0.1:5500",
+    origin: "https://prismatic-dragon-121dce.netlify.app/",
     credentials: true,
     methods: ["GET", "POST"],
     transports: ["websocket", "polling"],
@@ -102,4 +102,4 @@ function startGmaeInterval(roomName) {
   }
 }
 
-io.listen(3000);
+io.listen(process.env.PORT || 3000);
