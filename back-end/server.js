@@ -7,7 +7,7 @@ const clientRooms = {};
 
 const io = require("socket.io")("", {
   cors: {
-    origin: "https://prismatic-dragon-121dce.netlify.app/",
+    origin: "https://prismatic-dragon-121dce.netlify.app",
     credentials: true,
     methods: ["GET", "POST"],
     transports: ["websocket", "polling"],
